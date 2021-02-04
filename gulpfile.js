@@ -53,3 +53,7 @@ gulp.task('watch', function () {
     gulp.watch('Project/assets/images/*', gulp.series('image'));
 
 })
+
+gulp.task('default' , gulp.series('watch'));
+
+
