@@ -1,0 +1,29 @@
+doctype html
+html
+   head
+     meta(charset="UTF-8")
+     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+     title ~ L O G I N ~
+     include header.pug
+     body
+      .Parent-div 
+       .Child-div1 
+          p.title تسجيل الدخول
+          form(action="")
+            input(type="text" placeholder="اسم المستخدم")
+            input(type="password" placeholder="كلمه المرور")
+            button.login تسجيل الدخول
+
+       .Child-div2  
+         img.teacher(src="images/Mask.png", alt="")
+         h2.name يوسف الشريف
+         span.job مدرس رياضيات
+         p.des مدرس أول رياضيات حاصل على بكالريوس تربية من جامعة عين شمس وحاصل على ماجستير الرياضيات من جامعة كامبريدج البريطانية وعضو الجمعية العمومية لعلوم الرياضيات في جامعة القاهرة.
+         
+         .soicalMedia
+            img(src="images/twitter.png", alt="" )
+            img(src="images/facebook.png", alt="")
+            img(src="images/youtube.png", alt="" )
+
+          
+     include footer.pug

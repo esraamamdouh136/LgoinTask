@@ -1,0 +1,148 @@
+$first-color: #20639C;
+$second-color: #F7D65C;
+
+
+body {
+     margin: 0px;
+     padding: 0px;
+
+     .Parent-div {
+          display: flex;
+          height: 550px;
+
+
+          @mixin Child-div {
+               width: 50%;
+               padding-top: 10%;
+          }
+
+          .Child-div1 {
+               @include Child-div;
+               background-color: $first-color;
+               color: white;
+
+               p.title {
+                    text-align: center;
+               }
+
+               form {
+                    input {
+                         display: block;
+                         display: block;
+                         background-color: transparent;
+                         width: 300px;
+                         border: none;
+                         border: 1px solid #9FBED8;
+                         margin: 20px auto;
+                         padding: 10px;
+                         border-radius: 5px;
+                    }
+
+                    input::placeholder {
+                         color: white;
+                         text-align: right;
+                    }
+
+                    input:focus {
+                         border-color: white !important;
+                    }
+               }
+
+               button.login {
+                    background: transparent;
+                    width: 315px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border: none;
+                    border: 1px solid $second-color;
+                    margin: auto;
+                    display: block;
+                    color: white;
+               }
+
+
+          }
+
+          .Child-div2 {
+               @include Child-div;
+               background-color: $second-color;
+
+               img.teacher {
+
+                    width: 17%;
+                    margin: auto;
+                    display: block;
+
+               }
+
+               h2 {
+                    color: #20639C;
+                    text-align: center;
+                    margin-block-end: 4px;
+               }
+
+               span.job {
+                    display: block;
+                    margin: auto;
+                    text-align: center;
+                    font-size: 12px;
+               }
+
+               p.des {
+                    padding: 0px 19px;
+                    text-align: center;
+                    font-size: 15px;
+                    line-height: 1.6;
+                    color: #707070;
+               }
+
+               .soicalMedia {
+                    display: flex;
+                    justify-content: center;
+
+                    img {
+                         width: 7%;
+                         padding: 0px 14px;
+                    }
+               }
+
+          }
+     }
+
+     .footer {
+          .text {
+               text-align: center;
+               font-size: 12px;
+          }
+     }
+
+     @media screen and (max-width: 992px) {
+          .Parent-div {
+               display: block !important;
+               height: auto;
+
+               .Child-div1 {
+                    width: 100%;
+                    padding-bottom: 30px;
+
+                    input {
+                         width: auto !important;
+                    }
+
+                    button.login {
+                         width: auto !important;
+                    }
+
+               }
+
+               .Child-div2 {
+                    width: 100%;
+                    padding-bottom: 30px;
+
+               }
+
+          }
+
+
+     }
+}
